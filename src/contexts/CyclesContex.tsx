@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useReducer, useState } from "react";
+import { ReactNode, createContext, useEffect, useReducer, useState } from "react";
 import { Cycle, CyclesReducer } from "../reducers/cycles/reducer";
 import { addNewCycleAction, interruptCurrentCycleAction, markCurrentCycleAsFinishedAction } from "../reducers/cycles/actions";
 
@@ -21,7 +21,6 @@ interface CyclesContextType {
 interface CyclesContextProviderProps {
     children: ReactNode;
 }
-
 
 export const CyclesContext = createContext({} as CyclesContextType);
 
